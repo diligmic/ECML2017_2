@@ -53,7 +53,7 @@ Step 4:
 
 Three different configurations are derived while building the code Image_conversion. The first configuration refers to the transductive mode with fully labelled examples (as mentioned in the paper) while the second configuration refers to the same mode with partially labelled examples (as mentioned in the paper). There is also a third configuration which refers to the transductive mode but the patterns are not randomnly sampled as in the fully labelled mode, but instead the examples of the first 475 patterns of each class are placed in the training example file, the next 130 examples of each class are placed in the test example file whereas the last 110 examples of each class are placed in the validation example file.  To run the executable for Image_conversion the following command line can be used depending on the image size that the user wants to use as input to the SBRS:
 
-./Image_conversion --input_dir=<path_of_the_input_directory_where_the_folder_ImageNetSubset_with_all_the_images_reside> --output_dir=<user_defined_path_where_all_data_and_examples_files_created_will_be_placed> --image_size=<32/64/128/227/256>
+./Image_conversion  --input_dir=<path_of_the_input_directory_where_the_folder_ImageNetSubset_with_all_the_images_reside>  --output_dir=<path_where_all_data_and_examples_files_are_created>  --image_size=<32/64/128/227/256>
 
 Step 5:
 
