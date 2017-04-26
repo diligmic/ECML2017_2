@@ -42,7 +42,7 @@ Now, the SBRS_CAFFE code can be built in a GPU machine to obtain the executable.
 
 Step 3:
 
-To run the experiments as mentioned in the paper, the user also needs to prepare the data files in the format that SBRS_CAFFE can recognize. SBRS_CAFFE in the transductive mode(as mentioned in the paper : in transductive mode all the images are seen during training) requires all the pixel values of all the patterns(5005 images) placed in the data file, and there corresponding labels in the examples files. Some of the examples are seen during the training (3325 examples),some during validation(770 examples) and the remaining labels are used only for the testing purposes(910 examples). 
+To run the experiments as mentioned in the paper, the user also needs to prepare the data files in the format that SBRS_CAFFE can recognize. SBRS_CAFFE in the transductive mode (as mentioned in the paper : all the images are seen during training) requires all the pixel values of all the patterns (5005 images) placed in the data file, and there corresponding labels in the examples files. Some of the examples are seen during the training (3325 examples), some during validation (770 examples) and the remaining labels are used only for the testing purposes (910 examples). 
 
 To prepare the datafiles, the code Image_conversion.tar.7z is provided. This code should be unzipped and built using the following dependencies:
 
@@ -51,7 +51,9 @@ To prepare the datafiles, the code Image_conversion.tar.7z is provided. This cod
 	
 Step 4:
 
-Three different configurations are derived while building the code Image_conversion. The first configuration refers to the transductive mode with fully labelled examples(as mentioned in the paper) while the second configuration refers to the same mode with partially labelled examples(as mentioned in the paper). There is also a third configuration which referes to the transductive mode but the patterns are not randomnly sampled as in the fully labelled mode, but instead the first examples of the first 3325 patterns are placed in the training examples file,e To run the executable for Image_conversion the following command line can be used:
+Three different configurations are derived while building the code Image_conversion. The first configuration refers to the transductive mode with fully labelled examples (as mentioned in the paper) while the second configuration refers to the same mode with partially labelled examples (as mentioned in the paper). There is also a third configuration which refers to the transductive mode but the patterns are not randomnly sampled as in the fully labelled mode, but instead the examples of the first 475 patterns of each class are placed in the training example file, the next 130 examples of each class are placed in the test example file whereas the last 110 examples of each class are placed in the validation example file.  To run the executable for Image_conversion the following command lines can be used depending on the image size that the user wants to use as input to the SBRS:
+
+
  
    Each of the folders mentioned below contains C++ code to perform different kinds of operation for preprocessing the datasets and building 
    different configurations for the SBRS setup. The zip folders are namely
