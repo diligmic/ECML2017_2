@@ -18,7 +18,14 @@ and when unzipped, you should get a folder named ImageNetSubset. This folder sho
 	    7. zebra
 
    			
-   CODE FOLDERS:
+ CODE FOLDERS:
+ 
+According to the paper submitted, the semantic based regularizer(SBRS) code is present in SBRS_CAFFE.tar.7z. This semantic based regularizer is integrated with the caffe C++ API and hence needs gpu enabled caffe to be built in the machine before using the semantic based regularizer. The semantic based regularizer two pre-requisite dependencies:
+
+      	    1. gpu enabled caffe
+            2. gflags
+ 
+The installation instructions of gpu enabled caffe can be found here http://caffe.berkeleyvision.org/install_apt.html. Caffe itself is built using gflags, and hence the second requirement of SBRS is fulfilled automatically. 
    Each of the folders mentioned below contains C++ code to perform different kinds of operation for preprocessing the datasets and building 
    different configurations for the SBRS setup. The zip folders are namely
  
