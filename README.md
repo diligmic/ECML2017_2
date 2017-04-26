@@ -1,12 +1,15 @@
 # ECML2017_2
-Introduction
+
+
+INTRODUCTION
 
 This repository contains the original data and codes that were described in the paper "Integrating Prior Knowledge into Deep Learning".
 
-------------------------------------------------  DESCRIPTION ---------------------------------------------------------------
+
+DESCRIPTION
 
 
-DATASET:
+Dataset:
 
 The dataset is downloadable from the link https://drive.google.com/file/d/0BxXW4upKVdaRR3dGWFk3X1Nhemc/view?usp=sharing
 and when unzipped, the user should get a folder named ImageNetSubset. This folder should be placed in the current user directory   depending where the user wants to put all the images. The images belongs to animals from 7 different classes downloaded from Imagenet(http://www.image-net.org/). They have been cleaned manually to remove images which got downloaded by the name of an animal to which it didnt belong. For ex. sometimes an image of an airplane is tagged as a bird. All these unwanted and unrelated images are deleted and the dataset is cleaned. After this initial pre-processing, the dataset contains 715 images from each of the 7 classes(total of 5005 images). The 7 classes are namely:
@@ -20,7 +23,7 @@ and when unzipped, the user should get a folder named ImageNetSubset. This folde
 	    7. zebra
 
    			
- CODE FOLDERS:
+ Code Folders:
  
 According to the paper submitted, the semantic based regularizer(SBRS) code is present in SBRS_CAFFE.tar.7z. This semantic based regularizer is integrated with the caffe C++ API and hence needs gpu enabled caffe to be built in the machine before using the semantic based regularizer. The semantic based regularizer have two pre-requisite dependencies:
 
