@@ -77,7 +77,11 @@ The output folder of the SBRS_CAFFE gives the classification outputs for all pre
 
 Step 8:
 
-In order to evaluate the classification output of only the final classes or predicates (7 animal categories) the python evaluate_results_05_10.py script is used.
+In order to evaluate the classification output of only the final classes or predicates (7 animal categories) the python evaluate_results_05_10.py script is used. This script takes the test_results.dat file the target labels file as two of its argument. It can be run using the following command
+
+python evaluate_results_05_10.py test_results.dat test_out.txt DataTrans_Labels.txt
+
+The DataTrans_Labels.txt is also present in the repository.
  
 
 
