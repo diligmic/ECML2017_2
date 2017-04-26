@@ -25,15 +25,30 @@ and when unzipped, the user should get a folder named ImageNetSubset. This folde
    			
 Code Folders:
  
-According to the paper submitted, the semantic based regularizer(SBRS) code is present in SBRS_CAFFE.tar.7z. This semantic based regularizer is integrated with the caffe C++ API and hence needs gpu enabled caffe to be built in the machine before using the semantic based regularizer. The semantic based regularizer have two pre-requisite dependencies:
+According to the paper submitted, the semantic based regularizer(SBRS) code is present in SBRS_CAFFE.tar.7z. 
+
+Step 1:
+This semantic based regularizer is integrated with the caffe C++ API and hence needs gpu enabled caffe to be built in the machine before using the semantic based regularizer. The semantic based regularizer have two pre-requisite dependencies:
 
 	1. gpu enabled caffe
 	2. gflags
  
 The installation instructions of gpu enabled caffe can be found here http://caffe.berkeleyvision.org/install_apt.html. Caffe itself is built using gflags, and hence the second requirement of SBRS is fulfilled automatically. 
+
+Step 2:
 Now, the SBRS_CAFFE code can be built in a GPU machine to obtain the executable.
 
+Step 3:
 To run the experiments as mentioned in the paper, the user also needs to prepare the data files in the format that SBRS_CAFFE can recognize.
+
+To prepare the datafiles, the code Image_conversion.tar.7z is provided. This code should be unzipped and built using the following dependencies:
+
+	1.opencv (Installation instructions: http://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html)
+	2.boost_regex(Installation instruction: http://www.boost.org/)
+	
+Step 4:
+To run the executable for Image_conversion the following command line can be used:
+
    Each of the folders mentioned below contains C++ code to perform different kinds of operation for preprocessing the datasets and building 
    different configurations for the SBRS setup. The zip folders are namely
  
