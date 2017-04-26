@@ -57,12 +57,27 @@ Three different configurations are derived while building the code Image_convers
 
 Step 5:
 
-After running the above step, the following files will be created like TransData.dat, TrainExamples.dat, TestExamples.dat,ValidationExamples.dat. These files can then be used as inputs to the SBRS. Some of the sample files are provided in the zipped folder Input_files.tar.7z which can also be used as inputs to the SBRS.
+After running the above step, the following files will be created like TransData.dat, TrainExamples.dat, TestExamples.dat,ValidationExamples.dat. These files can then be used as inputs to the SBRS. Some of the sample files are also provided in the zipped folder Input_files.tar.7z which can also be used as inputs to the SBRS.
 
 Step 6:
 
+Finally, the SBRS_CAFFE executable can be used with the following commandline to perform the experiments
 
+(When rules or constraints are not used)
+./SBRS_CAFFE --transductive --training_data_file=DataTrans.txt --training_examples_file=TrainExamples.txt --test_examples_file=TestExamples.txt --validation_examples_file=ValidationExamples.txt --predicates_file=Predicates.txt --rules_file= --max_iterations=<no_of_iterations_for_training> --lambda_labeled_values=1 --lambda_regularization_values=0.001 --learning_rate=0.001 --learning_type=RGD --function_type=NEURAL_NETWORK --model_file=model_file.prototxt --output_dir=./out --input_dir=. --nn_pre_built_inputs=true 
 
+(When rules or constraints are used)
+./SBRS_CAFFE --transductive --training_data_file=DataTrans.txt --training_examples_file=TrainExamples.txt --test_examples_file=TestExamples.txt --validation_examples_file=ValidationExamples.txt --predicates_file=Predicates.txt --rules_file=Rules.txt  --max_iterations=<no_of_iterations_for_training> --lambda_labeled_values=1 --lambda_regularization_values=0.001 --learning_rate=0.001 --learning_type=RGD --function_type=NEURAL_NETWORK --model_file=model_file.prototxt --output_dir=./out --input_dir=. --nn_pre_built_inputs=true --lambda_constraint_values=0.1 --iteration_start_constraints=<iterations_after_which_contraints_are_applied> --learning_rate_for_constraints=0.000005 --run_collective_classification_after_train
+
+All the other required files that were used in the paper like the Predicates.txt, Rules.txt and model_file.prototxt(that defines the caffe neural network model) are all placed in the Input_files.tar.7z folder. 
+
+Step 7:
+
+The output folder of the SBRS_CAFFE gives the classification outputs for all predicates. The output folder in turn contains two sub folders: one that gives the normal classification output of the clasification task and the other that gives the collective classification output for all the predicates.
+
+Step 8:
+
+In order to evaluate the classification output of only the final classes or predicates (7 animal categories) the python evaluate_results_05_10.py script is used.
  
 
 
