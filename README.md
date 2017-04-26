@@ -57,15 +57,11 @@ Three different configurations are derived while building the code Image_convers
 
 Step 5:
 
-After running the above step, the following files will be created like TransData.dat, TrainExamples.dat, TestExamples.dat,ValidationExamples.dat. These files can then be used as inputs to the SBRS. Some of the sample files are provided in the zipped folder Input_files.tar.7z.
-   Each of the folders mentioned below contains C++ code to perform different kinds of operation for preprocessing the datasets and building 
-   different configurations for the SBRS setup. The zip folders are namely
- 
-      	    1. Image_conversion.tar.gz
-            2. Image_conversion_nontrans.tar.gz
-           
-    	
-    Detailed description about each of these folders are present inside the .tar.gz of that folder.
+After running the above step, the following files will be created like TransData.dat, TrainExamples.dat, TestExamples.dat,ValidationExamples.dat. These files can then be used as inputs to the SBRS. Some of the sample files are provided in the zipped folder Input_files.tar.7z which can also be used as inputs to the SBRS.
+
+Step 6:
+
+
 
  
 
