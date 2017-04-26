@@ -3,7 +3,7 @@ Introduction
 
 This repository contains the original data and codes that were described in the paper "Integrating Prior Knowledge into Deep Learning".
 
-------------------------------------------------  DESCRIPTION --------------------------------------------------------------
+------------------------------------------------  DESCRIPTION ---------------------------------------------------------------
 DATASET:
 
 The dataset is downloadable from the link https://drive.google.com/file/d/0BxXW4upKVdaRR3dGWFk3X1Nhemc/view?usp=sharing
