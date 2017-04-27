@@ -23,7 +23,7 @@ and when unzipped, the user should get a folder named ImageNetSubset. This folde
 	    7. zebra
 
    			
-Code Folders:
+Usage:
  
 According to the paper submitted, the semantic based regularizer(SBRS) code is present in SBRS_CAFFE.tar.7z. 
 
